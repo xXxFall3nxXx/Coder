@@ -324,8 +324,11 @@ while True:
             full_message_history,
             memory,
             cfg.fast_token_limit) # TODO: This hardcodes the model to use GPT3.5. Make this an argument
+    
 
     # Print Assistant thoughts
+    assistant_reply.replace('"', "'")
+    # print("this is the assistant_reply",assistant_reply)
     print_assistant_thoughts(assistant_reply)
 
     # Get command name and arguments

@@ -28,7 +28,7 @@ def get_command(response):
     """Parse the response and return the command name and arguments"""
     try:
         response_json = fix_and_parse_json(response)
-
+        # print("reponse_json",response_json)
         if "command" not in response_json:
             return "Error:" , "Missing 'command' object in JSON"
 
